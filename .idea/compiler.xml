@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="multi-modules-study.algorithm.main" target="1.8" />
+      <module name="multi-modules-study.algorithm.test" target="1.8" />
+      <module name="multi-modules-study.java-study.main" target="1.8" />
+      <module name="multi-modules-study.java-study.test" target="1.8" />
+      <module name="multi-modules-study.main" target="1.8" />
+      <module name="multi-modules-study.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

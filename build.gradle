@@ -1,0 +1,25 @@
+subprojects {
+    group 'io.zingoworks'
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+
+}
+
+project(':java-algorithm') {
+    dependencies {
+        compile project(':java')
+    }
+}
+
+project(':spring') {
+    dependencies {
+        compile project(':java')
+    }
+}

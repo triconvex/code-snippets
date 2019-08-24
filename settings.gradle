@@ -1,0 +1,6 @@
+rootProject.name = 'multi-modules-study'
+
+include 'spring'
+include 'java'
+include 'java-algorithm'
+
