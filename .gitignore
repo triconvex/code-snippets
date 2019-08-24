@@ -98,3 +98,10 @@ hs_err_pid*
 /java/build/
 /java-algorithm/build/
 /spring/build/
+.idea/modules/
+.idea/vcs.xml
+.idea
+java-algorithm/src/
+java/src/
+spring/src/
+src/
