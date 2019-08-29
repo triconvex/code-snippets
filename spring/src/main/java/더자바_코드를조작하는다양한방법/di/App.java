@@ -1,4 +1,6 @@
-package di;
+package 더자바_코드를조작하는다양한방법.di;
+
+import 더자바_코드를조작하는다양한방법.annotation.MyAnnotation;
 
 import java.util.Arrays;
 
@@ -10,7 +12,7 @@ public class App {
         Book book = new Book();
         Class<? extends Book> aClass = book.getClass(); // 이미 만들어진 인스턴스에서 getClass 해오는 방법, 2
 
-        Class<?> aClass1 = Class.forName("di.Book"); // 클래스 네임을 통해서, 3   스프링이나 어디서 앞과 비슷한 문자열을 본다면, 이런 용도로 쓰일 가능성이 높다
+        Class<?> aClass1 = Class.forName("더자바_코드를조작하는다양한방법.di.Book"); // 클래스 네임을 통해서, 3   스프링이나 어디서 앞과 비슷한 문자열을 본다면, 이런 용도로 쓰일 가능성이 높다
 
         Arrays.stream(bookClass.getFields()).forEach(System.out::println); // <- 실행하면 d 라는 필드만 찍힌다, getFields <- public 만
 
@@ -33,6 +35,16 @@ public class App {
 
         //필드뿐만 아니라, 메서드와 생성자, 인스터페이스도 가능하며
         //상위 클래스의 내용까지도 가져올 수 있다
+
+
+        Arrays.stream(Book.class.getDeclaredFields()).forEach(f -> {
+            Arrays.stream(f.getAnnotations()).forEach(a -> {
+                if(a instanceof MyAnnotation) {
+                    MyAnnotation myAnnotation = (MyAnnotation) a;
+                    System.out.println(myAnnotation.name());
+                }
+            });
+        });
     }
 
     /**
