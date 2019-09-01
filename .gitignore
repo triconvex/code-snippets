@@ -95,10 +95,12 @@ hs_err_pid*
 
 
 # Project exclude paths
-/java/build/
-/java-algorithm/build/
-/java-algorithm/out/
-/spring/build/
 .idea/modules/
 .idea/vcs.xml
 .idea
+java/out/
+java/build/
+java-algorithm/out/
+java-algorithm/build/
+spring/out/
+spring/build/
