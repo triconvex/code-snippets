@@ -9,7 +9,7 @@ public class 최솟값만들기 {
         Arrays.sort(A);
         Arrays.sort(B);
 
-        for(int i = 0; i < A.length; i++) {
+        for(int i = 0, length = A.length; i < length; i++) {
             sum += A[i] * B[A.length - 1 - i];
         }
 

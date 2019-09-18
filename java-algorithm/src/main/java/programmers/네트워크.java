@@ -24,7 +24,7 @@ public class 네트워크 {
         visit[index] = true;
         int[] currentComputer = computers[index];
 
-        for(int i = 0; i < currentComputer.length; i++) {
+        for(int i = 0, length = currentComputer.length; i < length; i++) {
             if(currentComputer[i] == 1 && !visit[i]) {
                 dfs(i, computers, visit);
             }

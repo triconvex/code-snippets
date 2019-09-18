@@ -51,7 +51,7 @@ public class 단어변환 {
         public boolean isConvertible(Word target) {
             int count = 0;
 
-            for(int i = 0; i < word.length(); i++) {
+            for(int i = 0, length = word.length(); i < length; i++) {
                 if(word.charAt(i) != target.word.charAt(i)) {
                     count++;
                 }
