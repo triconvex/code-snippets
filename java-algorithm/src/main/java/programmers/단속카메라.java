@@ -1,5 +1,7 @@
 package programmers;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class 단속카메라 {
@@ -41,6 +43,25 @@ public class 단속카메라 {
         public int compareTo(Route target) {
             return this.end - target.end;
         }
+    }
+
+    /*
+        TODO : 참고풀이
+        람다식 comparator
+        ++ans 전위연산 이유? 필요성?
+     */
+
+    public int 참고풀이(int[][] routes) {
+        Arrays.sort(routes, Comparator.comparingInt(a -> a[1]));
+        int ans = 0;
+        int last_camera = Integer.MIN_VALUE;
+        for (int[] a : routes) {
+            if (last_camera < a[0]) {
+                ++ans;
+                last_camera = a[1];
+            }
+        }
+        return ans;
     }
 
 }
