@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: example
+  profiles:
+    active: local
+
+logging:
+  level:
+    root: warn
+    example: debug
+    org.springframework: info

@@ -1,0 +1,7 @@
+### 1
+POST http://localhost:8080/users/something
+Content-Type: application/x-www-form-urlencoded
+
+{"name":"this is username"}
+
+###

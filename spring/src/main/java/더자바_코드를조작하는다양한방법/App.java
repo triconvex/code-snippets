@@ -33,7 +33,6 @@ public class App {
 
         Method sum = Animal.class.getDeclaredMethod("sum", int.class, int.class);
         System.out.println(sum.invoke(animal, 3, 5));
-
     }
 
 }

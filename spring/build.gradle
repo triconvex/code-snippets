@@ -25,6 +25,9 @@ repositories {
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+
+    implementation 'org.projectlombok:lombok'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 }
