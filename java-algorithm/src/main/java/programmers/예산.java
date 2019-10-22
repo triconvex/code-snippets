@@ -7,7 +7,7 @@ public class 예산 {
     public int solution(int[] budgets, int M) {
         Arrays.sort(budgets);
 
-        if((long) Arrays.stream(budgets).sum() < M) {
+        if(Arrays.stream(budgets).mapToLong(Long::valueOf).sum() < M) {
             return budgets[budgets.length - 1];
         }
 
@@ -24,9 +24,9 @@ public class 예산 {
             }
 
             if(total > M) {
-                right = mid;
+                right = mid - 1;
             } else {
-                left = mid;
+                left = mid + 1;
             }
 
             previousMid = mid;
