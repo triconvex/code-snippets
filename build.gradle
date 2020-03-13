@@ -21,3 +21,9 @@ project(':spring') {
         compile project(':java')
     }
 }
+
+project(':spock') {
+    dependencies {
+        compile project(':java')
+    }
+}
