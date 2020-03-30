@@ -27,3 +27,9 @@ project(':spock') {
         compile project(':java')
     }
 }
+
+project(':data-jpa') {
+    dependencies {
+        compile project(':java')
+    }
+}

@@ -4,4 +4,4 @@ include 'spring'
 include 'java'
 include 'java-algorithm'
 include 'spock'
-
+include 'data-jpa'
