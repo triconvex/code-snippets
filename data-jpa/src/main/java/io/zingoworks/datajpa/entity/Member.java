@@ -1,6 +1,9 @@
 package io.zingoworks.datajpa.entity;
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -10,13 +13,14 @@ import javax.persistence.*;
 @ToString(of = {"id", "username", "age"}) //Team과 같은 연관관계 속성은 포함안하는게...
 public class Member {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     @Column(name = "member_id")
     private Long id;
     private String username;
     private int age;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY) //jpa 모든 연가ㅗㄴ관계? 매니투원?은 레이지로 깁노ㅗ세팅, 필요할때ㅡ이 거
     @JoinColumn(name = "team_id")
     private Team team;
 
@@ -25,6 +29,14 @@ public class Member {
 
     public Member(String username) {
         this.username = username;
+    }
+
+    public Member(String username, int age, Team team) {
+        this.username = username;
+        this.age = age;
+        if(team != null) {
+            changeTeam(team);
+        }
     }
 
     public void changeTeam(Team team) {
