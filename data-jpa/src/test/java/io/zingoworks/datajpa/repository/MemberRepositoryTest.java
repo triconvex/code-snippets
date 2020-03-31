@@ -33,5 +33,7 @@ class MemberRepositoryTest {
         assertThat(findMember).isEqualTo(member);
         //equalsAndHashCode 오버라이드 안했음에도 불구하고 == 인 이유는?
         //한 트랜잭션 내에서는 동일성을 보장함 -> 별개 트랜잭션이었다면 동일하지 않았을 것임
+
+        System.out.println("memberRepository.getClass() = " + memberRepository.getClass());
     }
 }
