@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 @Entity
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @ToString(of = {"id", "username", "age"}) //Team과 같은 연관관계 속성은 포함안하는게...
 public class Member {
 
