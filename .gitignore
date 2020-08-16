@@ -103,3 +103,5 @@ hs_err_pid*
 **/build
 
 /private
+
+/gradle
