@@ -10,7 +10,19 @@ subprojects {
     }
 }
 
+project(':java') {
+    dependencies {
+
+    }
+}
+
 project(':java-algorithm') {
+    dependencies {
+        compile project(':java')
+    }
+}
+
+project(':jpa') {
     dependencies {
         compile project(':java')
     }
@@ -23,12 +35,6 @@ project(':spring') {
 }
 
 project(':spock') {
-    dependencies {
-        compile project(':java')
-    }
-}
-
-project(':data-jpa') {
     dependencies {
         compile project(':java')
     }

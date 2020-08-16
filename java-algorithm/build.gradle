@@ -10,3 +10,12 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    runtimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+}
+
+test {
+    useJUnitPlatform()
+}
